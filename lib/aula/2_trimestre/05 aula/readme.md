@@ -27,7 +27,7 @@ flutter pub add path
 ### [Passo 01 - Definir Script BD](readme_01_script.md)
 ### [Passo 02 - Definir Interface](readme_02-interface_cidade_dao.md)
 ### [Passo 03 - Definir DAO](readme_03_dao.md)
-### Passo 04 - Implementar as telas
+### Passo 04 - Implementar os Widgets
 - [Passo 04a Definir o campo opções](../../../../lib/view/widget/campo_opcoes_estado.dart)
-- [Passo 04a - Definir a tela de lista da cidade](https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/05%20aula/projeto/final/lib/view/widget/cidade_lista.dart)
-### [Passo 05 - Alterar Formulário](projeto/final/lib/view/readme.md)
+- [Passo 04b Inserir o campo opções no  form](../../../../lib/view/cidade_form.dart)
+- [Passo 04c Alterar o widget lista](../../../../lib/view/cidade_lista.dart)
