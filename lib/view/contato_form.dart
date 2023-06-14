@@ -5,7 +5,7 @@ import 'package:flutter_curso_agenda/view/interface/contato_interface_dao.dart';
 import 'package:flutter_curso_agenda/view/widget/botao.dart';
 import 'package:flutter_curso_agenda/view/widget/campo_email.dart';
 import 'package:flutter_curso_agenda/view/widget/campo_nome.dart';
-import 'package:flutter_curso_agenda/view/widget/campo_opcoes.dart';
+import 'package:flutter_curso_agenda/view/widget/campo_opcoes_cidade.dart';
 import 'package:flutter_curso_agenda/view/widget/campo_telefone.dart';
 import 'package:flutter_curso_agenda/view/widget/campo_url.dart';
 
@@ -23,7 +23,7 @@ class _ContatoFormState extends State<ContatoForm> {
   final campoTelefone = CampoTelefone(controle: TextEditingController());
   final campoEmail = CampoEmail(controle: TextEditingController());
   final campoURL = CampoURL(controle: TextEditingController());
-  final campoOpcoes = CampoOpcoes();
+  final campoCidade = CampoOpcoesCidade();
 
   @override
   Widget build(BuildContext context){
@@ -38,7 +38,7 @@ class _ContatoFormState extends State<ContatoForm> {
             campoTelefone,
             campoEmail,
             campoURL,
-            campoOpcoes,
+            campoCidade,
             criarBotao(context),
           ],
         )
@@ -77,7 +77,7 @@ class _ContatoFormState extends State<ContatoForm> {
       email: campoEmail.controle.text,
       telefone: campoTelefone.controle.text,
       urlAvatar: campoURL.controle.text,
-      cidade: campoOpcoes.cidadeSelecionada!
+      cidade: campoCidade.opcaoSelecionado!
     );
   }
 
@@ -86,6 +86,6 @@ class _ContatoFormState extends State<ContatoForm> {
     campoEmail.controle.text = contato.email;
     campoTelefone.controle.text = contato.telefone;
     campoURL.controle.text = contato.urlAvatar;
-    campoOpcoes.cidadeSelecionada = contato.cidade;
+    campoCidade.opcaoSelecionado = contato.cidade;
   }
 }

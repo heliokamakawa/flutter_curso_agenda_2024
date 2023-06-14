@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_curso_agenda/database/sqlite/dao/cidade_dao_sqlite.dart';
 import 'package:flutter_curso_agenda/view/dto/cidade.dart';
 
-class CampoOpcoes extends StatefulWidget {
-  Cidade? cidadeSelecionada;
-  CampoOpcoes({Key? key}) : super(key: key);
+class CampoOpcoesCidade extends StatefulWidget {
+  Cidade? opcaoSelecionado;
+  CampoOpcoesCidade({Key? key}) : super(key: key);
   
   @override
-  State<CampoOpcoes> createState() => _CampoOpcoesState();
+  State<CampoOpcoesCidade> createState() => _CampoOpcoesCidadeState();
 }
 
-class _CampoOpcoesState extends State<CampoOpcoes> {
+class _CampoOpcoesCidadeState extends State<CampoOpcoesCidade> {
   
   void associarCidade(Cidade cidade){
     setState(() {
-      widget.cidadeSelecionada = cidade;
+      widget.opcaoSelecionado = cidade;
     });
   }
   late Future<List<Cidade>> dadosBD;
@@ -42,7 +42,7 @@ class _CampoOpcoesState extends State<CampoOpcoes> {
           hint: const Text('cidade onde mora'),
           isExpanded: true,
           items: itensCidade,
-          value: widget.cidadeSelecionada,
+          value: widget.opcaoSelecionado,
           onChanged: (cidadeEscolhida){
             if(cidadeEscolhida != null) associarCidade(cidadeEscolhida);
           }
