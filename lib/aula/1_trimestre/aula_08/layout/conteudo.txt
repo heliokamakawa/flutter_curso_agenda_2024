@@ -1,0 +1,18 @@
+Conteúdo?
+- fundamentos para o posicionamento de elementos gráficos;
+- rotas; 
+- principais elementos gráficos;
+- Classe Scaffold, AppBar, FloatingActionButton, BottomAppBar, Container, outros...
+- prototipação;
+- complemente...
+
+Objetivos da aula?
+
+
+O que foi realizado na aula?
+
+
+Principais dificuldades?
+
+
+Principais aprendizagens?
