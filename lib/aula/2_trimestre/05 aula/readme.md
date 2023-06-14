@@ -29,5 +29,45 @@ flutter pub add path
 ### [Passo 03 - Definir DAO](readme_03_dao.md)
 ### Passo 04 - Implementar os Widgets
 - [Passo 04a Definir o campo opções](../../../../lib/view/widget/campo_opcoes_estado.dart)
-- [Passo 04b Inserir o campo opções no  form](../../../../lib/view/cidade_form.dart)
+- [Passo 04b Inserir o campo opções no form](../../../../lib/view/cidade_form.dart)
 - [Passo 04c Alterar o widget lista](../../../../lib/view/cidade_lista.dart)
+### Passo 05 - Caso queira testar rapidamente, altere rotas
+```dart
+class Rota{
+  static const String estadoForm = 'estado_form';
+  static const String estadoLista = 'estado_lista';
+  static const String cidadeLista = '/';                //definindo cidade como home
+  static const String cidadeForm = 'cidade_form';
+  static const String contatoLista = 'contato_lista';   //tirando contao como home
+  static const String contatoForm = 'contato_form';
+  static const String contatoDetalhe = 'contato_detalhe';
+}
+```
+
+### verifique se routes do App está configurado
+```dart
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      routes: {
+        Rota.estadoLista    :(context) => const EstadoLista(),
+        Rota.estadoForm     :(context) => const EstadoForm(),
+        Rota.cidadeLista    :(context) => const CidadeLista(),
+        Rota.cidadeForm     :(context) => const CidadeForm(),
+        Rota.contatoLista   :(context) => const ContatoLista(),
+        Rota.contatoForm    :(context) => const ContatoForm(),
+        Rota.contatoDetalhe :(context) => const ContatoDetalhe(),
+      }
+    );
+  }
+} 
+```
