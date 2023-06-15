@@ -4,13 +4,29 @@
 - Flutter (oficial) - DropdownButton<T> class - https://api.flutter.dev/flutter/material/DropdownButton-class.html?gclid=Cj0KCQjwj_ajBhCqARIsAA37s0zcNoOwCky2JtM7EJOdtDS41woKL_1SANSFTn0r_K9SUhutc5rAdpIaAhpeEALw_wcB&gclsrc=aw.ds
 - Flutter (oficial) - DropdownMenuItem - https://api.flutter.dev/flutter/material/DropdownMenuItem-class.html
 - Equals - https://dart-lang.github.io/linter/lints/hash_and_equals.html
-  
+
+## Informes
+### Conteúdo - Persistência
+<p>A previsão era de trabalharmos com persistência local e remota (Firebase e com REST API). Para não atropelar o conteúdo e respeitar as dificuldades, vamos trabalhar com mais tranquilidade a persistênica local. Da forma que trabalhamos, está fácil de adotar outras tecnologias.</p>
+<p>Para a remota: (1) vou disponibilizar materiais; (2) colocar como desafio para recuperação do diário/conceito - o conteúdo é bem tranquilo! (3) fico a disposição para ajudar (aulas, atendimento, e-mail).</p>
+
+### Afastamento
+<p>Há possibilidade de eu conseguir a Licença Capacidatação. Assim, é provável que a professora Angelica assuma o 3º trimestre - é certo que irá trabalhar outras tecnologias de DDM (react).</p>
+
 ## Diário de Aula - REVISÃO
+19h20 às 20h15 - EM DUPLAS
+- Verificar:
+  - Datas de avaliação;
+  - Quantidade de aulas e o período que resta;
+  - Progresso do seu projeto;
+- Atividade do Sábado Letivo - consegue? se não elabore uma possível atividade;
+- Fazer o orçamento do projeto;
+- Coloque tudo em um texto e valide com o professor.
+
 19h20 às 21h00 - EM DUPLAS
-- Baixar este projeto e fazer funcionar
-- Fazer o orçamento do projeto
-- 2 CRUD COM ASSOCIAÇÃO FUNCIONANDO (1 de cada projeto - sem copiar e colar)
-- Elaborar o tutorial com explicação dos pontos cruciais
+- Baixar este projeto e fazer funcionar;
+- 2 CRUD COM ASSOCIAÇÃO FUNCIONANDO (1 de cada projeto - sem copiar e colar);
+- Elaborar o tutorial com explicação dos pontos cruciais;
 
 ### Orçamento
 - Projeto? (1) complexidade; (2) progresso; (3) dedicação (o que implementou fora da aula, diferente das aulas); (4) periodicidade.
@@ -19,7 +35,7 @@
 
 ## Desenvolvimento do Projeto
 19h20 às 21h00
-- Implementar um CRUD com relacionamento associativa (muitos para muitos)
+- Implementar um CRUD com relacionamento de muitos para muitos
   
 ## AULA CRUD com associação
 <p>Vou postar o "passo a passo" de um DAO associação - no caso Cidade.</p>

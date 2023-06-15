@@ -21,7 +21,6 @@ class _ContatoListaState extends State<ContatoLista> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista Contatos')),
       body: criarLista(context),
       floatingActionButton: BotaoAdicionar(acao: ()=> Navigator.pushNamed(context, Rota.contatoForm).then((value)=>buscarContatos())),
       bottomNavigationBar: const BarraNavegacao(),

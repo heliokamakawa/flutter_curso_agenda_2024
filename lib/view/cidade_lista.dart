@@ -20,7 +20,6 @@ class _CidadeListaState extends State<CidadeLista> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista Cidades')),
       body: criarLista(context),
       floatingActionButton: BotaoAdicionar(acao: ()=> Navigator.pushNamed(context, Rota.cidadeForm).then((value)=>buscarCidades())),
       bottomNavigationBar: const BarraNavegacao(),

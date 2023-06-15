@@ -7,6 +7,7 @@ import 'package:flutter_curso_agenda/view/contato_form.dart';
 import 'package:flutter_curso_agenda/view/contato_lista.dart';
 import 'package:flutter_curso_agenda/view/estado_form.dart';
 import 'package:flutter_curso_agenda/view/estado_lista.dart';
+import 'package:flutter_curso_agenda/view/home.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -21,6 +22,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
+        Rota.home           :(context) => const Home(),
         Rota.estadoLista    :(context) => const EstadoLista(),
         Rota.estadoForm     :(context) => const EstadoForm(),
         Rota.cidadeLista    :(context) => const CidadeLista(),
