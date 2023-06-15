@@ -33,8 +33,9 @@ class CidadeDAOSQLite implements CidadeInterfaceDAO{
 ```
 ### Criar os métodos da interface
 Ao implementar a interface "CidadeInterfaceDAO" será necessário implementar todos os métodos da interface. Faça da seguinte forma:<br>
-→ Com a nome da classe sublinhada em vermelho, clique em sugestões (ícone lâmpada);<br>
-→ "Create 4 missing overrrides".<br>
+→ Selecione o nome da classe que estará sublinhada em vermelho;<br>
+→ Clique em sugestões (ícone lâmpada);<br>
+→ No menu que surgir, clique em "Create 4 missing overrrides".<br>
 Implementando os métodos, a nossa classe deverá ficar da seguinte forma:
 ```dart
 import 'package:persistencia/view/dto/cidade.dart';
@@ -67,7 +68,7 @@ class CidadeDAOSQLite implements CidadeInterfaceDAO{
 }
 ```
 ### Implementação consultarTodos
-- Antes de mais nada, precisamos entender que na consulta, os dados retornados pelo SQFLite tem o formato de "map<dynamic,dynamic>".<br>
+- Antes de mais nada, precisamos entender que na consulta, os dados retornados pelo SQFLite tem o formato de `dart map<dynamic,dynamic>`.<br>
 - O primeiro dynamic refere-se ao nome da coluna e o segundo o respectivo valor. <br>
 - Implementar o método [converter](readme-converter.md).<br>
 Agora sim, implementamos o "consultarTodos".
