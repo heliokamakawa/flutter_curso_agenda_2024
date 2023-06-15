@@ -1,25 +1,3 @@
-<svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <style>
-            h1 {
-                color: red;
-                animation: mymove 2s infinite;
-            }
-
-            @keyframes mymove {
-                from {
-                    color: red;
-                }
-                to {
-                    color: yellow;
-                }
-            }
-            </style>
-            <h1>HELLO WORLD!</h1>
-        </div>
-    </foreignObject>
-</svg>
 # Método converter
 <p>Precisamos criar o método converter para organizar os dados Orientado a Objeto (no projeto) que vem do BD que é relacional (que é uma FK).</p>
 
@@ -29,12 +7,12 @@
 >DESAFIO! Descreva no diário a diferença/vantagens/desvantagens de implementação de converter como classe e método.
 
 ### converter - PARÂMETRO
-<p>O método deve RECEBER como PARÂMETRO o resultado que vem do BD.</p>
+<p>O método deve RECEBER como PARÂMETRO - `(Map<dynamic,dynamic> resultado)` - o resultado que vem do BD.</p>
 
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
 ```
-<p>Atualmente as bibliotecas de BD retornam um tipo Map<dynamic, dynamic> em que, o primeiro dynamic é o nome da coluna e o segundo, o valor.</p> 
+<p>Atualmente as bibliotecas de BD retornam um tipo `Map<dynamic, dynamic>` em que, o primeiro dynamic é o nome da coluna e o segundo, o valor.</p> 
 <p>O resultado traz os valores da tabela cidade (no formato Map), que tem a associçaão como uma <b>FK</b>, ou seja, a tabela "cidade" tem a coluna "estado_id". Lembre-se que o "estado_id" é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
 
 >Exemplo: A cosulta do registro da cidade Maringá da tabela cidade retornaria: 
