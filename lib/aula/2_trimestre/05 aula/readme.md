@@ -5,13 +5,21 @@
 - Flutter (oficial) - DropdownMenuItem - https://api.flutter.dev/flutter/material/DropdownMenuItem-class.html
 - Equals - https://dart-lang.github.io/linter/lints/hash_and_equals.html
   
-## Diário de Aula
-2 CRUD BÁSICO FUNCIONANDO; <br>
-2 CRUD COM ASSOCIAÇÃO FUNCIONANDO<br>
+## Diário de Aula - REVISÃO
+19h20 às 21h00
+- Baixar este projeto e fazer funcionar
+- 2 CRUD COM ASSOCIAÇÃO FUNCIONANDO (1 de cada projeto - sem copiar e colar)
+- Elaborar o tutorial com explicação dos pontos cruciais
+- Fazer o orçamento do projeto
+
+### Orçamento
+- Projeto? (1) complexidade; (2) progresso; (3) dedicação (o que implementou fora da aula, diferente das aulas); (4) periodicidade.
+- Desempenho aula? (1) presenças; (2) Horário; (3) Produtividade.
+- Aprendizagem? (1) conhecimento; (2) implementação sem ajuda/copiar/colar; (3) fundamento; (4) assiduidade.
 
 ## Desenvolvimento do Projeto
-- 2 CRUD BÁSICO
-- 2 CRUD COM ASSOCIAÇÃO 
+19h20 às 21h00
+- Implementar um CRUD com relacionamento associativa (muitos para muitos)
   
 ## AULA CRUD com associação
 <p>Vou postar o "passo a passo" de um DAO associação - no caso Cidade.</p>
@@ -44,7 +52,7 @@ class Rota{
 }
 ```
 
-### verifique se routes do App está configurado
+### Verifique se routes do App está configurado
 ```dart
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);

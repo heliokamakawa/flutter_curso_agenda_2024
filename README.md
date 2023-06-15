@@ -3,6 +3,9 @@ Projeto com fins didáticos que possui funcionalidades básicas
 - CRUD sem/com associação e associativa;
 - uso de APIs, bibliotecas, resuros nativos;
 
+## Aula corrente
+Aula 05 - REVISÃO (clique [aqui](lib/aula/2_trimestre/05%20aula))
+
 ## DDM
 Disciplina ministrada no curso de Engenharia de Software
 
