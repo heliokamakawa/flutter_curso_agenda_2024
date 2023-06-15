@@ -1,5 +1,5 @@
 # Método converter
-<p>Precisamos criar o método converter para organizar os dados <dt>Orientado a Objeto</dt> (no projeto) que vem do BD que é <dt>relacional</dt> (que é uma FK).</p>
+<p>Precisamos criar o método converter para organizar os dados ![#1589F0]Orientado a Objeto (no projeto) que vem do BD que é ![#1589F0]relacional (que é uma FK).</p>
 
 ## Implementação do método converter
 <p>A conversão pode ser uma classe a parte ou um método dentro do DAO. Para este projeto vamos implementar como um método dentro do DAO.</p>
