@@ -1,10 +1,10 @@
 # Método converter
-<p>Precisamos criar o método converter para organizar os dados <span style="color: Blue;font-weight: bold;">Orientado a Objeto</span> (no projeto) que vem do BD que é <span style="color: Blue;font-weight: bold;">relacional</span> (que é uma FK).</p>
+<p>Precisamos criar o método converter para organizar os dados ~~Orientado a Objeto~~ (no projeto) que vem do BD que é ~~relacional~~ (que é uma FK).</p>
 
 ## Implementação do método converter
 <p>A conversão pode ser uma classe a parte ou um método dentro do DAO. Para este projeto vamos implementar como um método dentro do DAO.</p>
 
->>>DESAFIO! Descreva no diário a diferença/vantagens/desvantagens de implementação de converter como classe e método
+>DESAFIO! Descreva no diário a diferença/vantagens/desvantagens de implementação de converter como classe e método.
 
 ### converter - PARÂMETRO
 <p>O método deve RECEBER como PARÂMETRO o resultado que vem do BD.</p>
@@ -14,9 +14,10 @@
 ```
 <p>Atualmente as bibliotecas de BD retornam um tipo Map<dynamic, dynamic> em que, o primeiro dynamic é o nome da coluna e o segundo, o valor.</p> 
 <p>O resultado traz os valores da tabela cidade (no formato Map), que tem a associçaão como uma <b>FK</b>, ou seja, a tabela "cidade" tem a coluna "estado_id". Lembre-se que o "estado_id" é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
->>>Exemplo: A cosulta do registro da cidade Maringá da tabela cidade retornaria: <br>
-{id: 5, nome: Maringá, estado_id: 1}<br>
-Veja que estado_id é 1 referente ao estado do Paraná. <b>NÃO É O OBJETO ESTADO</b>. 
+
+>Exemplo: A cosulta do registro da cidade Maringá da tabela cidade retornaria: 
+>>{id: 5, nome: Maringá, estado_id: 1}
+>>Veja que estado_id é 1 referente ao estado do Paraná. <b>NÃO É O OBJETO ESTADO</b>. 
 
 ## converter - RETORNO
 O método deve RETORNAR o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
