@@ -1,5 +1,5 @@
 # Método converter
-<p>Precisamos criar o método converter para organizar os dados **Orientado a Objeto** (no projeto) que vem do BD que é relacional (que é uma FK).</p>
+<p>Precisamos criar o método converter para organizar os dados Orientado a Objeto (no projeto) que vem do BD que é relacional (que é uma FK).</p>
 
 ## Implementação do método converter
 <p>A conversão pode ser uma classe a parte ou um método dentro do DAO. Para este projeto vamos implementar como um método dentro do DAO.</p>
@@ -29,7 +29,7 @@ Neste contexto, precisamos "converter" a Foreign Key que vem do BD para um Objet
 
 ## converter - CONVERSÃO
 Na consulta de cidade no projeto:
-- precisamos trazer a cidade com o objeto Estado;
+- precisamos trazer a cidade com o objeto estado;
 - o objeto estado precisa dos dados de TODOS os atributos do estado (id, nome e sigla);
 - o resultado da consulta no BD da cidade, traz somente a FK do estado associado;
 - a FK só tem o id do estado;
@@ -41,18 +41,13 @@ Veja o código:
 ```dart
     Estado estado = await EstadoDAOSQLite().consultar(resultado['estado_id']);
 ```
-1 - Declaramos um objeto estado - `Estado estado =`;
-2 - 
-para preencher este objeto, usamos o método consultar por id do DAO do estado.<br>
+1. `Estado estado =` → declarando a varíavel do objeto estado;
+2. `EstadoDAOSQLite()` → criando dado estado;
+3. `await` → como o método é assíncrono, ordenamos "esperar"
+4. `.consultar(` → método de consulta do dao estado;
+5. `resultado['estado_id']` → código do estado associado a cidade que queremos buscar;
 
-
-- await → como o método é assíncrono, ordenamos "esperar" (await)
-- EstadoDAOSQLite().consultar →  consultar do dao estado
-- resultado['estado_id'] → o id do estado específico da cidade
-- o método consultar do DAO do estado irá:
-    (1) irá buscar os dados estado conforme o id (estado_id) que passamos;
-    (2) converter os dados para o objeto estado;
-    (3) retornar o objeto estado preenchido!!!
+O método consultar do DAO do estado irá buscar os dados estado conforme o id (estado_id) passado, converter os dados para o objeto estado e retornar o objeto estado preenchido!!!
    
 ## converter - ASSSOCIAÇÃO
 Agora que temos o OBJETO estado e não a Foreign Key, inserimos/associamos a cidade que será retornada
