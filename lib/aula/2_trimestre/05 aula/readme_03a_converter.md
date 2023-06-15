@@ -1,5 +1,9 @@
+<style type="text/css">
+    span { color: Blue; }
+</style>
+
 # Método converter
-<p>Precisamos criar o método converter para organizar os dados <b>Orientado a Objeto</b> (no projeto) que vem do BD que é <b>relacional</b> (que é uma FK).</p>
+<p>Precisamos criar o método converter para organizar os dados <span>Orientado a Objeto</span> (no projeto) que vem do BD que é <span>relacional</span> (que é uma FK).</p>
 
 ## Implementação do método converter
 <p>A conversão pode ser uma classe a parte ou um método dentro do DAO. Para este projeto vamos implementar como um método dentro do DAO.</p>
