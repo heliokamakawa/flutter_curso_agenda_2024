@@ -15,22 +15,22 @@ Aplicamos DIP com 2 objetivos:
 <p>No projeto, quando precisamos desenvolver as telas para o CRUD de uma cidade preciamos SALVAR, ALTERAR, EXCLUIR e CONSULTAR.</p>
 <p>Para quem está desenvolvendo as telas, não importa detalhes específicos de como estas operações devem ser realizadas, massss..... </p>
 <p>Precisa saber o FORMATO destes métodos para fazer a chamada e tratar o respectivo retorno da chamada.</p>
-Exemplo1: No desenvolvimento da "tela salvar cidade", pouco importa como vai ser, mas precisamos saber qual o formato: nome do método, o que deve ser passado no parâmetro e o que retorna<br>
+<p>Exemplo: No desenvolvimento de widgets para o "CRUD de cidade", a especificidade de comandos de um BD escolhido não importa! Neste momento, talvez a escolha do BD ainda nem esteja definido! Porém, para conseguirmos desenvolver os widgets precisamos ter o "FORMATO" dos métodos definidos:</p>
+- Para salvar, o método precisa receber os dados da cidade e retornar a cidade com o id gerado pelo BD;
+- Para excluir, o método precisa receber o id da cidade que será excluída e retornar um bool indicando se deu certo;
+- Para consultar, o  método precisa receber o id da cidade que será buscada no BD e retornar os seus respectivos dados;
+- Para consultarTodos o método não precisa de parâmetro e deve retornar uma lista de dados de todas as cidades.
+<p>Com base nestas "necessdiades", definimos a interface abaixo.</p>
 
 ```dart
 abstract class CidadeInterfaceDAO{
-  // precisa receber os dados da cidade e retorna a cidade com o id gerado pelo BD
   Future<Cidade> salvar(Cidade cidade); 
-  
-  // precisa receber o id da cidade que será excluída e retorna um bool indicando se deu certou
   Future<bool> excluir(dynamic id);      
-  
-  // precisa receber o id da cidade que será buscada no BD e retorna os seus respectivos dados
   Future<Cidade> consultar(int id);
-  
-  // retorna uma lista de dados das cidades
   Future<List<Cidade>>  consultarTodos();
 }
 ```
+<p>Veja, que agora, mesmo sem o BD ou independente do BD, conseguimos desenvolver os widgtes.</p>
+
 [código completo](cidade_interface_dao.dart)
 

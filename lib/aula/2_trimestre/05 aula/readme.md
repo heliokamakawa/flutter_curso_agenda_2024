@@ -8,9 +8,9 @@
 ## Diário de Aula - REVISÃO
 19h20 às 21h00 - EM DUPLAS
 - Baixar este projeto e fazer funcionar
+- Fazer o orçamento do projeto
 - 2 CRUD COM ASSOCIAÇÃO FUNCIONANDO (1 de cada projeto - sem copiar e colar)
 - Elaborar o tutorial com explicação dos pontos cruciais
-- Fazer o orçamento do projeto
 
 ### Orçamento
 - Projeto? (1) complexidade; (2) progresso; (3) dedicação (o que implementou fora da aula, diferente das aulas); (4) periodicidade.
@@ -24,16 +24,16 @@
 ## AULA CRUD com associação
 <p>Vou postar o "passo a passo" de um DAO associação - no caso Cidade.</p>
 <p>O projeto possui outros DAO's com associção. O código está disponível no projeto. Porém, como todos tem exatamente a mesma dinâmica, não faz sentido e assim, não postarei o "passo a passo" dos demais.</p>
-### VERIFIQUE AS Dependências/Bibliotecas → JÁ FIZEMOS 
-→ sqflite - biblioteca para trabalhar com sqlite;<br>
-→ path - pacote que fornece operações comuns para manipulação de caminhos: junção, divisão, normalização, etc (independente do SO).<br>
+### VERIFIQUE AS Dependências/Bibliotecas (JÁ FIZEMOS)
+- sqflite → biblioteca para trabalhar com sqlite;
+- path → pacote que fornece operações comuns para manipulação de caminhos: junção, divisão, normalização, etc (independente do SO).
 
  ```cmd
 flutter pub add sqflite
 flutter pub add path  
 ```
 ### [Passo 01 - Definir Script BD](readme_01_script.md)
-### [Passo 02 - Definir Interface](readme_02-interface_cidade_dao.md)
+### [Passo 02 - Definir Interface](readme_02_interface_cidade_dao.md)
 ### [Passo 03 - Definir DAO](readme_03_dao.md)
 ### Passo 04 - Implementar os Widgets
 - [Passo 04a Definir o campo opções](../../../../lib/view/widget/campo_opcoes_estado.dart)
