@@ -1,3 +1,8 @@
+<style>
+H1{color:Blue !important;}
+H2{color:DarkOrange !important;}
+p{color:Black !important;}
+</style>
 # Método converter
 <p>Precisamos criar o método converter para organizar os dados ![#1589F0]Orientado a Objeto (no projeto) que vem do BD que é ![#1589F0]relacional (que é uma FK).</p>
 
