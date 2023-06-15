@@ -7,15 +7,15 @@
 >DESAFIO! Descreva no diário a diferença/vantagens/desvantagens de implementação de converter como classe e método.
 
 ### converter - PARÂMETRO
-<p>O método deve RECEBER como PARÂMETRO - `(Map<dynamic,dynamic> resultado)` - o resultado que vem do BD.</p>
+<p>O método deve RECEBER como PARÂMETRO o resultado que vem do BD.</p>
 
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
 ```
-<p>Atualmente as bibliotecas de BD retornam um tipo `Map<dynamic, dynamic>` em que, o primeiro dynamic é o nome da coluna e o segundo, o valor.</p> 
+<p>Atualmente as bibliotecas de BD retornam um tipo Map<dynamic, dynamic> em que, o primeiro dynamic é o nome da coluna e o segundo, o valor.</p> 
 <p>O resultado traz os valores da tabela cidade (no formato Map), que tem a associçaão como uma <b>FK</b>, ou seja, a tabela "cidade" tem a coluna "estado_id". Lembre-se que o "estado_id" é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
 
->Exemplo: A cosulta do registro da cidade Maringá da tabela cidade retornaria: 
+>Exemplo: A cosulta do registro Maringá da tabela cidade retornaria: 
 >><p>{id: 5, nome: Maringá, estado_id: 1}</p>
 >>Note que "estado_id" é 1, referente à Paraná da tabela Estado. <b>NÃO É O OBJETO ESTADO</b>. 
 
