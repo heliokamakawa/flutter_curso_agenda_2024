@@ -6,7 +6,7 @@
 - Equals - https://dart-lang.github.io/linter/lints/hash_and_equals.html
   
 ## Diário de Aula - REVISÃO
-19h20 às 21h00
+19h20 às 21h00 - EM DUPLAS
 - Baixar este projeto e fazer funcionar
 - 2 CRUD COM ASSOCIAÇÃO FUNCIONANDO (1 de cada projeto - sem copiar e colar)
 - Elaborar o tutorial com explicação dos pontos cruciais
@@ -15,7 +15,7 @@
 ### Orçamento
 - Projeto? (1) complexidade; (2) progresso; (3) dedicação (o que implementou fora da aula, diferente das aulas); (4) periodicidade.
 - Desempenho aula? (1) presenças; (2) Horário; (3) Produtividade.
-- Aprendizagem? (1) conhecimento; (2) implementação sem ajuda/copiar/colar; (3) fundamento; (4) assiduidade.
+- Aprendizagem? (1) conhecimento; (2) implementação sem ajuda/copiar/colar; (3) fundamento; (4) validação contínua/assiduidade.
 
 ## Desenvolvimento do Projeto
 19h20 às 21h00
