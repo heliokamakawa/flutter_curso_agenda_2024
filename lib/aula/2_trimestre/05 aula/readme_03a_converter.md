@@ -1,10 +1,10 @@
 # Método converter
-<p>Precisamos criar o método converter para organizar os dados Orientado a Objeto (no projeto) que vem do BD que é relacional (que é uma FK).</p>
+<p>Precisamos criar o método converter para organizar os dados **Orientado a Objeto** (no projeto) que vem do BD que é relacional (que é uma FK).</p>
 
 ## Implementação do método converter
 <p>A conversão pode ser uma classe a parte ou um método dentro do DAO. Para este projeto vamos implementar como um método dentro do DAO.</p>
 
->DESAFIO! Descreva no diário a diferença/vantagens/desvantagens de implementação de converter como classe e método.
+>DESAFIO! Qual a diferença, vantagens e desvantagens da implementação de converter como classe e método?
 
 ### converter - PARÂMETRO
 <p>O método deve RECEBER como PARÂMETRO o resultado que vem do BD.</p>
@@ -19,21 +19,33 @@
 >><p>{id: 5, nome: Maringá, estado_id: 1}</p>
 >>Note que "estado_id" é 1, referente à Paraná da tabela Estado. <b>NÃO É O OBJETO ESTADO</b>. 
 
-## converter - RETORNO
-O método deve RETORNAR o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
+### converter - RETORNO
+O método deve RETORNAR o OBJETO Cidade com o respectivo OBJETO Estado associado, pois o nosso projeto é Orientado a Objeto.<br>
 ```dart
 Future<Cidade> converter...
-//o objeto cidade precisa ter o OBJETO estado e não a coluna do tipo int.
+//o objeto cidade precisa ter o OBJETO estado associado e não a coluna do tipo int.
 ```
 Neste contexto, precisamos "converter" a Foreign Key que vem do BD para um Objeto Estado! Como???<br>
 
 ## converter - CONVERSÃO
-(1) criamos um objeto estado;<br>
-(2) para preencher este objeto, usamos o método consultar por id do DAO do estado.<br>
+Na consulta de cidade no projeto:
+- precisamos trazer a cidade com o objeto Estado;
+- o objeto estado precisa dos dados de TODOS os atributos do estado (id, nome e sigla);
+- o resultado da consulta no BD da cidade, traz somente a FK do estado associado;
+- a FK só tem o id do estado;
+- então, para ter os demais dados deste estado, precisamos fazer uma nova consulta;
+- é por isto que utilizamos o dao estado.
+
+Veja o código:
 
 ```dart
     Estado estado = await EstadoDAOSQLite().consultar(resultado['estado_id']);
 ```
+1 - Declaramos um objeto estado - `Estado estado =`;
+2 - 
+para preencher este objeto, usamos o método consultar por id do DAO do estado.<br>
+
+
 - await → como o método é assíncrono, ordenamos "esperar" (await)
 - EstadoDAOSQLite().consultar →  consultar do dao estado
 - resultado['estado_id'] → o id do estado específico da cidade
