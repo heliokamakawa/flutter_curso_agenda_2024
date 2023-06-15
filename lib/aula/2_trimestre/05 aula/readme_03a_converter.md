@@ -1,5 +1,5 @@
 # Método converter
-<p>Precisamos criar o método converter para organizar os dados ~~Orientado a Objeto~~ (no projeto) que vem do BD que é ~~relacional~~ (que é uma FK).</p>
+<p>Precisamos criar o método converter para organizar os dados __Orientado a Objeto__ (no projeto) que vem do BD que é __relacional__ (que é uma FK).</p>
 
 ## Implementação do método converter
 <p>A conversão pode ser uma classe a parte ou um método dentro do DAO. Para este projeto vamos implementar como um método dentro do DAO.</p>
@@ -17,7 +17,7 @@
 
 >Exemplo: A cosulta do registro da cidade Maringá da tabela cidade retornaria: 
 >><p>{id: 5, nome: Maringá, estado_id: 1}</p>
->>Veja que estado_id é 1 referente ao estado do Paraná. <b>NÃO É O OBJETO ESTADO</b>. 
+>>Note que "estado_id" é 1, referente à Paraná da tabela Estado. <b>NÃO É O OBJETO ESTADO</b>. 
 
 ## converter - RETORNO
 O método deve RETORNAR o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
