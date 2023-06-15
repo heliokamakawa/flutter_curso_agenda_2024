@@ -16,7 +16,7 @@
 <p>O resultado traz os valores da tabela cidade (no formato Map), que tem a associçaão como uma <b>FK</b>, ou seja, a tabela "cidade" tem a coluna "estado_id". Lembre-se que o "estado_id" é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
 
 >Exemplo: A cosulta do registro da cidade Maringá da tabela cidade retornaria: 
->>{id: 5, nome: Maringá, estado_id: 1}<br>
+>><p>{id: 5, nome: Maringá, estado_id: 1}</p>
 >>Veja que estado_id é 1 referente ao estado do Paraná. <b>NÃO É O OBJETO ESTADO</b>. 
 
 ## converter - RETORNO
