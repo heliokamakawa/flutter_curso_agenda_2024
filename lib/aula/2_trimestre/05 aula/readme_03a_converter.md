@@ -42,8 +42,8 @@ Veja o código:
     Estado estado = await EstadoDAOSQLite().consultar(resultado['estado_id']);
 ```
 1. `Estado estado =` → declarando a varíavel do objeto estado;
-2. `EstadoDAOSQLite()` → criando dado estado;
-3. `await` → como o método é assíncrono, ordenamos "esperar"
+2. `await` → como o método é assíncrono, ordenamos "esperar";
+3. `EstadoDAOSQLite()` → criando dao estado;
 4. `.consultar(` → método de consulta do dao estado;
 5. `resultado['estado_id']` → código do estado associado a cidade que queremos buscar;
 
