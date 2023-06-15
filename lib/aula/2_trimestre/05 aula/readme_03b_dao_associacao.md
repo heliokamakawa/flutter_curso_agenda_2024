@@ -68,19 +68,18 @@ class CidadeDAOSQLite implements CidadeInterfaceDAO{
 }
 ```
 ### Implementação consultarTodos
-- Antes de mais nada, precisamos entender que na consulta, os dados retornados pelo SQFLite tem o formato de `dart map<dynamic,dynamic>`.<br>
-- O primeiro dynamic refere-se ao nome da coluna e o segundo o respectivo valor. <br>
-- Implementar o método [converter](readme-converter.md).<br>
-Agora sim, implementamos o "consultarTodos".
+- Antes de mais nada, precisamos entender que na consulta ao BD, os dados retornados pelo SQFLite tem o formato de `map<dynamic,dynamic>`.<br>
+- O primeiro dynamic refere-se ao nome da coluna e o segundo o valor desta coluna armazenada no BD. <br>
+
 ```dart
   @override
   Future<List<Contato>> consultarTodos() async {
-    Database db = await  Conexao.criar(); 
-    List<Map<dynamic,dynamic>> resultadoBD = await db.query('cidade');
-    List<Cidade> lista = [];
-    for(var registro in resultadoBD){
-      var cidade = await converter(registro);
-      lista.add(cidade);
+    Database db = await  Conexao.criar();  //pegando referência Database
+    List<Map<dynamic,dynamic>> resultadoBD = await db.query('cidade'); //buscando os dados
+    List<Cidade> lista = []; //declarando a lista de cidades
+    for(var registro in resultadoBD){ //percorrendo os dados vindos do BD
+      var cidade = await converter(registro); //convertendo para objeto
+      lista.add(cidade);  //adicionando na lista de cidades
     }
     return lista;
   }
@@ -105,10 +104,10 @@ db.query('cidade'))
     }
     return lista;
 ```
-(1) definindo lista; <br>
-(2) percorrendo o resultadoBD do tipo map que veio da consulta no BD; <br>
-(3) chamando o nosso método "converter" para converter map (de cada registro do resultado) para o objeto (classe Cidade); <br>
-(4) retornar a lista do tipo cidade.<br>
+1. `List<Cidade> lista = [];` → declarando a lista de cidades; 
+2. `for(var registro in resultadoBD){` → percorrendo o resultado do BD;
+3. `var cidade = await converter(registro);` → convertendo o resultado do BD para o objeto; 
+4. `return lista;` → retorna a lista do tipo cidade.
 
 ## Implementação consultar
 
