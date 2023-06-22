@@ -11,7 +11,7 @@
 - Continuar o desenvolvimento e implementar os recursos nativos.
   
 ## AULA - Uso de recursos nativos do celular
-1º Passo - [baixar o projeto e resolver as dependências](https://github.com/heliokamakawa/flutter_curso_agenda_2024/tree/main)<br>
+1º Passo - [baixar o projeto e resolver as dependências](https://github.com/heliokamakawa/flutter_curso_agenda_2024)<br>
 2º Passo - adicionar depedências do URL Launcher<br>
  ```cmd
 flutter pub add sqflite
