@@ -6,7 +6,7 @@
 ## Diário de Aula 
 - em duplas → implementar o uso de recursos nativos (SMS, telefone, e-mail, outros);
 - individual → rodar o projeto e projetar o conceito;
-
+  - olhar as datas no diário e escrever/explicitar no git o que será entregue em cada dia
 ## Desenvolvimento do Projeto
 - Continuar o desenvolvimento e implementar os recursos nativos.
   
