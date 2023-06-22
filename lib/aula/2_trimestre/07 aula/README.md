@@ -14,47 +14,60 @@
 1º Passo - [baixar o projeto e resolver as dependências](https://github.com/heliokamakawa/flutter_curso_agenda_2024)<br>
 2º Passo - adicionar depedências do URL Launcher<br>
  ```cmd
-flutter pub add sqflite
-flutter pub add path
 flutter pub add url_launcher
 ```
-
+3º Passo - Abra o arquivo "contato_detalhe.dart"
+FLUTTER_CURSO_AGENDA_2024
+- lib
+  - view
+    - contato_detalhe.dart
+   
+4º Passo - Defina o método onTap do método "email" (linha 59)
 ```dart
-class Rota{
-  static const String estadoForm = 'estado_form';
-  static const String estadoLista = 'estado_lista';
-  static const String cidadeLista = '/';                //definindo cidade como home
-  static const String cidadeForm = 'cidade_form';
-  static const String contatoLista = 'contato_lista';   //tirando contao como home
-  static const String contatoForm = 'contato_form';
-  static const String contatoDetalhe = 'contato_detalhe';
-}
-```
-
-### Verifique se routes do App está configurado
-```dart
-class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+  Widget email(Contato contato){
+    return Card(  
+      child: ListTile( 
+        title: const Text('E-mail:'),
+        onTap: (){
+          launchUrl(Uri(scheme: 'mailto', path: contato.email)); //<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        },
+        subtitle: Text(contato.email),
       ),
-      routes: {
-        Rota.estadoLista    :(context) => const EstadoLista(),
-        Rota.estadoForm     :(context) => const EstadoForm(),
-        Rota.cidadeLista    :(context) => const CidadeLista(),
-        Rota.cidadeForm     :(context) => const CidadeForm(),
-        Rota.contatoLista   :(context) => const ContatoLista(),
-        Rota.contatoForm    :(context) => const ContatoForm(),
-        Rota.contatoDetalhe :(context) => const ContatoDetalhe(),
-      }
     );
   }
-} 
+```
+
+5º Passo - Defina o método onPressed do message do painelTelefone (linha 70)
+```dart
+  Widget painelTelefone(Contato contato){
+    return SizedBox(  
+      width: 100,
+      child:  Row(  
+        children: [ 
+          IconButton(
+            onPressed: (){
+              launchUrl(Uri(scheme: 'sms', path: contato.telefone)); //<<<<<<<<<<<<<<<<<<<<<<<<<<<
+            }, 
+```
+
+
+6º Passo - Defina o método onPressed do telefone do painelTelefone (linha 70)
+```dart
+  Widget painelTelefone(Contato contato){
+    return SizedBox(  
+      width: 100,
+      child:  Row(  
+        children: [ 
+          IconButton(
+            onPressed: (){
+              launchUrl(Uri(scheme: 'sms', path: contato.telefone));
+            }, 
+            icon: const Icon(Icons.message)
+          ),
+          IconButton(
+            onPressed: (){
+              launchUrl(Uri(scheme: 'tel', path: contato.telefone));  //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+            }, 
+            icon: const Icon(Icons.phone)
+          )
 ```
