@@ -72,16 +72,19 @@ Sequência aula
 	→ criar editor (TextEditingController)
 	→ associar ao campo (controller)
 	→ criar o widget mensagem
-	```
-	   ScaffoldMessenger.of(context).showSnackBar(
-	      SnackBar(content: Text('mensagem'),
-	   );
-	```
+ 
+```dart
+	ScaffoldMessenger.of(context).showSnackBar(
+		SnackBar(content: Text('mensagem'),
+	);
+```
 	→ pegar o valor
+ 
+ ```dart
 	   ScaffoldMessenger.of(context).showSnackBar(
 	      SnackBar(content: Text(editor.text),
 	   );
-	
+```
 	@@@@ Diário de Aula - Atividade I
 		- Definir 1 campo sobrenome e mostrar o nome e sobrenome no clique
 		- Definir 1 campo de sua preferência mostra todos os valores no clique
@@ -93,24 +96,25 @@ Sequência aula
 	
 	*** Definindo restrições de um campo 
 	→ tornar um campo obrigatório - definindo validação (TextFormField/validator)
-	```
+```dart
 	   validator: (valorDigitado){
 	      if(valorDigitado == null || valorDigitado.isEmpty){
                  return 'O campo é obrigatório';
               }
               return null;
            }
-	```
+```
 	
 	*** Validação reativa e passiva: diferenças, vantagens, desvantagens, cuidados e quanto utilizar 
 	realizando validação passiva - no clique do botão 
 	→ definir chave tipada GlobalKey<FormState>
 	→ associar ao formulário (key: _formKey)
 	→ definir a invocação das validações no clique do botão 
-	```
+ 
+```dart
 	   onPressed: (){
               if(_formKey.currentState!.validate()){
-	```
+```
 	
 	*** Definindo o tipo do teclado
 	→ criar um campo idade 
@@ -125,18 +129,21 @@ Sequência aula
 	*** diferença entre permição, restrição e formato definido
 	→ Definir a restrição na entrada de dados (TextFormField/inputFormatters/FilteringTextInputFormatter)
 	→ Definir o campo numérico para idade
-	```
+
+ ```dart
 	    TextFormField(
 	       inputFormatters:[FilteringTextInputFormatter.digitsOnly],
-	```
+```
 	→ Criar um campo código postal que PERMITA a entrada de somente as letras BC e números
-	```
+ 
+```dart
 	FilteringTextInputFormatter.allow(RegExp(r'[1235465]') // explicar RegExp
-	```
+```
 	→ Criar um campo nome que NÃO ACEITE números
-	```
+
+ ```dart
 	FilteringTextInputFormatter.deny(RegExp(r'[1234567890]')
-	```
+```
 	------ com estes recursos podemos restrigir ou permitir, mas não conseguimos definir exatamente o formato como CPF, CNPJE, CEP e outros.
 	- restringimos o que na entrada de dados, mas não conseguimos restrigir a entrada conforme a posição - formato exato
 	
@@ -147,14 +154,16 @@ Sequência aula
 	→ instalar plugin via comando (flutter pub add MaskTextInputFormatter)
 	→ criar um campo telefone
 	→ definir a máscara
-	```
+
+ ```dart
 	var mask = MaskTextInputFormatter(mask: '(##) # ####-####');
-	```
+```
 	→ associar a máscara no campo 
-	```
+
+ ```dart
 	TextFormField(
 	   inputFormatters: [mask],
-	```
+```
 	
 	@@@@ Diário de Aula - Atividade II
 	- crie um novo formulário com os seguintes campos
