@@ -1,8 +1,16 @@
-Formulários
-Material de estudo:
-https://docs.flutter.dev/cookbook/forms
+# Formulários
+## Material de estudo:
+- Forms → https://docs.flutter.dev/cookbook/forms
 
->>>>> Diário de Aula
+ ## Diário de Aula
+ - Faça o seu diário de aula (anotações, exemplos e comentários); 
+
+## Projeto
+	- Faça todos os formulários do projeto.
+		- Deve possuir pelo menos 5.
+		- Dentre as 5, pelo menos uma com associação.
+		- Dentre as 5, pelo menos uma associativa.
+## Aula
 - Contextualização - Todo APP geralmente precisa salvar dados; Operações para manipular dados - CRUD; Relação CRUD com Widget.
 - Demonstração prática: Para todo o desenvolvimento do código, ter foco na aplicação de conceitos POO na escrita do código; identificando construtores e os respectivos parâmetros; identificando tipos em parâmetros que não conhecemos.
 - Formulário - recursos necessários
@@ -43,25 +51,16 @@ https://docs.flutter.dev/cookbook/forms
 	- Instalação do plugin no projeto. Compatibilidade de versões. Inserção da referência manual. Inserção por meio do comando;
 	- Demonstração prática: definindo máscara, inserindo a máscada no campo;
 	
-	
->>>>>Diário de Aula
- - Faça o seu diário de aula (anotações, exemplos e comentários); 
 
->>>>>Projeto
-	- Faça todos os formulários do projeto.
-		- Deve possuir pelo menos 5.
-		- Dentre as 5, pelo menos uma com associação.
-		- Dentre as 5, pelo menos uma associativa.
+>>>ATENÇÃO → ao digitar o código é importantíssimo prestar atenção nos conceitos de POO (criação de objeto, tipos de parâmetro, como descobrir o tipo/métodos).
 
-***PAPOO → ao digitar o código é importantíssimo prestar atenção nos conceitos de POO (criação de objeto, tipos de parâmetro, como descobrir o tipo/métodos).
-
-Sequência aula
+## Roteiro aula
 	→ Criar projeto
 	→ Criar pasta "view" e arquivo "formulario.dart"
 	→ Criar a classe Formulario, definir a herança StatelessWidget, definir o método build. ***PAPOO
 	→ Criar o widget Form. ***PAPOO
 	
-	*** Contextualização - o que é necessário para salvar dados? Quais elementos gráficos são necessários? Quais as sequências de funcionalidades?
+### Contextualização - o que é necessário para salvar dados? Quais elementos gráficos são necessários? Quais as sequências de funcionalidades?
 	→ Criar campo nome (TextFormField) ***PAPOO
 	→ Definindo rótulo - decoration/InputDecoration/label ***PAPOO
 	   - Qual é o tipo que a propriedade decoration espera? como criar? 
