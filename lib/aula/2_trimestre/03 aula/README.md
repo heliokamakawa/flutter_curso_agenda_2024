@@ -32,7 +32,7 @@ if(parametro != null){
  var contato = parametro as Contato;
 } 
 ```
-- associando o parâmetro recebindo nos campos; 
+- associando o parâmetro recebido nos campos; 
 ```dart
 var parametro = ModalRoute.of(context)!.settings.arguments;
 if(parametro != null){
