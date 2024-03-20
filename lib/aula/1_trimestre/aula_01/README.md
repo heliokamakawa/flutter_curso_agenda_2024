@@ -30,11 +30,10 @@ Quais foram os objetivos da aula?
 - Em que local inserimos o nosso código? 
 - Cite a sequência de execução do projeto.
 
-
+Materiais de aula
+ - DOC oficial: https://flutter.dev/
+ - DOC oficial dart: https://dart.dev/
+   
 O que foi realizado na aula?
-
-
 Principais dificuldades?
-
-
 Principais aprendizagens?
