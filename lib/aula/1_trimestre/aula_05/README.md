@@ -11,13 +11,8 @@ criando objetos com referência;
 criando objetos com referência anônima;
 
 
-Objetivos da aula?
-
-
-O que foi realizado na aula?
-
-
-Principais dificuldades?
-
-
-Principais aprendizagens?
+Elaborar o seu diário
+- Objetivos da aula?
+- O que foi realizado na aula?
+- Principais dificuldades?
+- Principais aprendizagens?
